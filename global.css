@@ -1,0 +1,117 @@
+/* varible 變數 */
+:root{
+    --red:#ff2424;
+    --blue: #0af;
+    --green: #3d9f5a;
+    --yellow: #f9f370;
+    --orange: #ffbd41;
+    --dark: #212121;
+    --light: #dcdcdc;
+    --white: #ffffff;
+}
+/* reset css */
+/*http://meyerweb.com/eric/tools/css/reset/v2.0| 20110126
+  License: none(public domain) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;                      
+}
+body{
+    font-family:'Segoe UI','微軟正黑體';
+    background-color: var(--white);
+}
+table{
+    border-collapse: collapse;
+}
+img {
+    width: 100%;
+}
+/* button */
+.btn{
+    display: inline-block;
+    padding: 8px 20px;
+    border: 0;
+    text-decoration: none;
+    border-radius: 6px;
+    /* border-radius=圓角 */
+    color: var(--btn-text-color, #222);
+    background-color: var(--btn-bg-color,#ccc);
+    transition: 500ms;
+}
+.btn-red{
+    --btn-bg-color:var(--red);
+    --btn-text-color:var(--white);
+}
+.btn-blue{
+    --btn-bg-color:var(--blue);
+}
+.btn-yellow{
+    --btn-bg-color:var(--yellow);
+}
+.btn-green{
+    --btn-bg-color:var(--green);
+}
+.btn-orange{
+    --btn-bg-color:var(--orange);
+}
+.btn-dark{
+    --btn-bg-color:var(--dark);
+}
+.btn-light{
+    --btn-bg-color:var(--light);
+}
+.btn-white{
+    --btn-bg-color:var(--white);
+}
+.btn-red:hover{
+    --btn-bg-color:rgba(255, 0, 0, 0.568);
+}
+.btn-blue:hover{
+    --btn-bg-color:rgba(0, 0, 255, 0.575);
+}
+.btn-yellow:hover{
+    --btn-bg-color:rgba(255, 255, 0, 0.301);
+}
+.btn-green:hover{
+    --btn-bg-color:rgba(0, 128, 0, 0.5);
+}
+.btn-orange:hover{
+    --btn-bg-color:rgba(255, 166, 0, 0.521);
+}
+.btn-dark:hover{
+    --btn-bg-color:#21212183;
+}
+.btn-light:hover{
+    --btn-bg-color:#dcdcdc8f;
+}
+.btn-white:hover{
+    --btn-bg-color:rgba(168, 166, 166, 0.493);
+}
+
+/* form */
+input, textarea{
+    outline: 0;
+}
+.form-control:focus{
+    border: 1px solid #b06ce7;
+}
+
+.form-label{
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.form-control{
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+textarea.form-control{
+    height: 200px;
+}

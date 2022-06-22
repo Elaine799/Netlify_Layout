@@ -1,0 +1,297 @@
+/* 手機版 */
+nav{
+    width: 100%;
+    background-color: var(--dark);
+
+    display: flex;
+    /* 文字垂直變水平 */
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 20px 0;
+
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+.nav-toggle{
+    color: var(--light);
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
+.logo{
+    color: var(--light);
+    text-decoration: none;
+    padding: 10px 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.nav-group{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.nav-group.open{
+    display: flex;
+}
+.nav-link{
+    color: var(--light);
+    text-decoration: none;
+    padding: 10px 8px;
+    margin: 0 8px;
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;  
+}
+.nav-link::after{
+    content: '';
+    display: inline-block;
+    border-bottom: 2px solid var(--orange);
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+
+    transform: scaleX(0);
+    transform-origin: left; 
+    /* 線的發散點預設是從中心，此設定可以更改 */
+    transition: 600ms;
+}
+.nav-link:hover::after{
+   transform: scaleX(1);
+}
+
+/* : 一個冒號是"虛擬類別" */
+/* .nav-link:hover{
+    color: var(--dark);
+    background-color: var(--yellow);
+    text-decoration:underline;
+} */
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+ /* 電腦版 */
+@media(min-width: 480px){
+    nav{
+        width: 100%;
+        height: 70px;
+        background-color: var(--dark);
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .logo{
+        padding: 0 8px;
+    }
+    .nav-group{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-link{
+        color: var(--light);
+        text-decoration: none;
+        padding: 10px 8px;
+        margin: 0 8px;
+        display: inline-block;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .nav-link::after{
+        content: '';
+        display: inline-block;
+        border-bottom: 2px solid var(--orange);
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+    
+        transform: scaleX(0);
+        transform-origin: left; 
+        /* 線的發散點預設是從中心，此設定可以更改 */
+        transition: 600ms;
+    
+    }
+    .nav-link:hover::after{
+       transform: scaleX(1);
+    }  
+    .nav-menu{
+        flex-direction: row;
+    }
+    .nav-menu:nth-child(2){
+        margin-left:auto;
+    }
+}
+
+/* header */
+header{
+    width: 100%;
+    background-image: url('https://picsum.photos/id/33/1600/1000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+
+    /* or Way two
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    */
+
+}
+.header-content{
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.432);
+    backdrop-filter: blur(6px);
+    padding: 30px;
+}
+.header-content h1{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.header-content p{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 15px 0;
+}
+@media(min-width: 480px){
+    header{
+        padding-top: 300px;
+        padding-bottom: 300px;  
+    }
+    .header-content h1{
+        font-size: 80px;
+    }
+    .header-content p{
+        font-size: 20px;
+    }
+}
+
+/* ABOUT TITLE */
+#about{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+#about h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--light);
+}
+#about h3{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+#about p{
+    line-height: 1.7rem;
+    margin: 15px 0;
+}
+
+/* SERVICE TITLE */
+#service{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--light);
+}
+#service h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--dark);
+}
+#service h3{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+#service p{
+    line-height: 1.7rem;
+    margin: 15px 0;
+}
+
+/* Product */
+#product{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+#product h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--light);
+}
+.product-wrapper{
+    border: var(--light) solid 1px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    transition: 300ms;
+}
+.product-wrapper:hover{
+    box-shadow: 3px 5px 0px 0px rgba(105, 105, 105, 0.596);
+    /* 
+    box-shadow: 水平偏移 垂直偏移 模糊程度 (擴散程度) 顏色
+    */
+    
+    transform: translate(-2px,-2px);
+}
+.product-content{
+    padding: 15px;
+}
+.product-content h3{
+    margin-bottom: 15px;
+}
+.product-content p{
+    margin-bottom: 20px;
+}
+
+/* Contact */
+#contact{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--light);
+}
+#contact h2{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--dark);
+}
+#contact .row{
+    justify-content: center;
+}
+
+/* footer */
+footer{
+    padding: 15px;
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+}
+
+/* gotop */
+.gotop{
+    color: var(--green);
+    position: fixed;
+    right: 30px;
+    bottom: 30px;    
+}
